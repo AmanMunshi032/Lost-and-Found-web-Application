@@ -1,4 +1,5 @@
 import React from 'react';
+import Model from '../../Components/Model/Model';
 
 const DitelsCard = ({ditels}) => {
     const{TaskTitle,photo,Date,Location,Category,Description,petType}=ditels?.[0]|| {}
@@ -20,10 +21,33 @@ const DitelsCard = ({ditels}) => {
          </div>
          <div>
             {
-            petType == "Found" ? <button className='btn btn-error w-full'>This is Mine!</button>:<button className='btn btn-secondary w-full'>Found This!
-</button>
+            petType == "Found" ? <>
+<button className="btn btn-error w-full" onClick={()=>document.getElementById('my_modal_3').showModal()}>open modal</button>
+<dialog id="my_modal_3" className="modal">
+  <div className="modal-box">
+    <form method="dialog">
+      {/* if there is a button in form, it will close the modal */}
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <Model></Model>
+  </div>
+</dialog>
+            </>
+
+            :<>
+           <button className="btn btn-error w-full" onClick={()=>document.getElementById('my_modal_3').showModal()}> This is Mine!</button>
+<dialog id="my_modal_3" className="modal">
+  <div className="modal-box">
+    <form method="dialog">
+      {/* if there is a button in form, it will close the modal */}
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <Model></Model>
+  </div>
+</dialog>
+            </>
             }
-            
+          
          </div>
         </div>
     );

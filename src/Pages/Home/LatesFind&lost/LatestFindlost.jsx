@@ -2,10 +2,11 @@ import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
 import { MdDateRange, MdSubtitles } from "react-icons/md";
 import { MdCategory } from "react-icons/md";
+import { Link } from 'react-router';
 
 
 const LatestFindlost = ({pet}) => {
-   const { TaskTitle,Date,Location,photo,Category}=pet
+   const {_id,TaskTitle,Date,Location,photo,Category}=pet
     return (
      <>
      <div className=" rounded-2xl shadow-lg overflow-hidden bg-white relative">
@@ -34,10 +35,10 @@ const LatestFindlost = ({pet}) => {
    </div>
     </div>
    </div>
-    
-    <button className="btn btn-soft btn-info w-full">view ditels</button>
-    
-  
+    <Link to={`/Ditelspages/${_id}`}>
+     <button className="btn btn-soft btn-info w-full">view ditels</button>
+    </Link>
+   
   </div>
 </div>
  

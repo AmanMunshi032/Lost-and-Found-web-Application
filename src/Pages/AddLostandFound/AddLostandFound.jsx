@@ -40,8 +40,8 @@ const AddLostandFound = () => {
         <form  onSubmit={hendalform }>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-3'> 
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
-  <label className="label text-xl">Post Type</label>
-  <select type="" name='petType' className="input w-full" placeholder="Enter 
+  <label className="label text-xl">PostType</label>
+  <select type="" name='postType' className="input w-full" placeholder="Enter 
    Category" >
   <option value='Lost'> Lost</option>
   <option value='Found'> Found</option>
@@ -70,13 +70,13 @@ const AddLostandFound = () => {
 </fieldset>
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">Location</label>
-  <input type="text" name='Location' className="input w-full" placeholder="Enter Deadline" />
+  <input type="text" name='Location' className="input w-full" placeholder="Enter Location" />
 </fieldset>
 
   
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl"> Thumbnail img</label>
-  <input type="text" name='photo' className="input w-full" placeholder="Enter Deadline" />
+  <input type="text" name='photo' className="input w-full" placeholder="Enter PhotoUrl" />
 </fieldset>
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">UserName</label>
