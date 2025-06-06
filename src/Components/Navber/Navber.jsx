@@ -16,7 +16,7 @@ const Navber = () => {
    }
     const links = <>
     <li className='font-semibold text-lg'><NavLink to= '/'>Home</NavLink></li>
-    <li className='font-semibold text-lg'><NavLink to= '/LostandFound'>Lost & Found </NavLink></li>
+    <li className='font-semibold text-lg'><NavLink to= '/Lostandfound'>Lost & Found </NavLink></li>
  </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -70,7 +70,7 @@ const Navber = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-center">
-           <li className='font-bold text-xl '><NavLink to= '/LostandFound'>Lost & Found </NavLink></li>
+           <li className='font-bold text-xl '><NavLink to= '/AddLostandFound'> Add Lost & Found </NavLink></li>
         <li> {user && user.email} </li>
         <li><button onClick={hendalsingout} className='btn btn-primary'>Logout</button></li>
       </ul>

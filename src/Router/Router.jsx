@@ -7,7 +7,9 @@ import Error from "../Error/Error";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import PrivetRoutes from "./PrivetRoutes";
-import LostandFound from "../Pages/LostandFound/LostandFound";
+import AddLostandFound from "../Pages/AddLostandFound/AddLostandFound";
+import LostFount from "../Pages/LostFount/LostFount";
+import Ditelspages from "../Pages/Ditelspage/Ditelspages";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -16,13 +18,32 @@ import LostandFound from "../Pages/LostandFound/LostandFound";
       children:[
         {
             path:'/',
-            Component:Home
+            Component:Home,
+            hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
+          loading-xl"></span></p>,
+            loader:()=>fetch('http://localhost:3000/users')
         },
         {
-         path:'/LostandFound',
+          path:'/Lostandfound',
+          Component:LostFount,
+            hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
+          loading-xl"></span></p>,
+          loader:()=>fetch('http://localhost:3000/Collections')
+        },
+        {
+         path:'/AddLostandFound',
           element:<PrivetRoutes>
-            <LostandFound></LostandFound>
+            <AddLostandFound></AddLostandFound>
           </PrivetRoutes>
+        },
+        {
+          path:'/Ditelspages/:id',
+          element:<PrivetRoutes>
+            <Ditelspages></Ditelspages>,
+          </PrivetRoutes>,
+           hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
+          loading-xl"></span></p>,
+          loader:()=>fetch('http://localhost:3000/Collections')
         },
         {
           path:'/Register',

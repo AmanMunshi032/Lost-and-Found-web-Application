@@ -1,7 +1,8 @@
 import React, { use } from 'react';
 import { Authcontext } from '../../Context/Authcontext';
+import Swal from 'sweetalert2';
 
-const LostandFound = () => {
+const AddLostandFound = () => {
   const{user}=use(Authcontext)
    const hendalform =(e)=>{
      e.preventDefault()
@@ -9,6 +10,26 @@ const LostandFound = () => {
        const formdata = new FormData(form)
   const Updatedata = Object.fromEntries(formdata.entries())
   console.log(Updatedata)
+   
+  fetch('http://localhost:3000/Users',{
+    method:"POST",
+    headers:{
+       'content-type':'application/json'
+    },
+    body:JSON.stringify(Updatedata)
+  })
+  .then(res=> res.json())
+  .then(data=>{
+    console.log('after data is',data)
+    Swal.fire({
+  icon: "success",
+  title: "Your Data has been successfully..!",
+  showConfirmButton: false,
+  timer: 1500
+});
+  })
+
+
    }
   
     return (
@@ -20,7 +41,7 @@ const LostandFound = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-3'> 
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">Post Type</label>
-  <select type="" name='pet-Type' className="input w-full" placeholder="Enter 
+  <select type="" name='petType' className="input w-full" placeholder="Enter 
    Category" >
   <option value='Lost'> Lost</option>
   <option value='Found'> Found</option>
@@ -35,17 +56,17 @@ const LostandFound = () => {
   <label className="label text-xl">Category</label>
   <select type="" name='Category' className="input w-full" placeholder="Enter 
    Category" >
-  <option value='Cats'> Cats</option>
-  <option value='Dogs'> Dogs</option>
-  <option value='Rabbit'>Rabbits</option>
-  <option value='Birds'>Birds</option>
-  <option value='Fishs'>Fishs</option>
-  <option value='Hens'>Hens</option>
+  <option value='Cat'> Cat</option>
+  <option value='Dog'> Dog</option>
+  <option value='Rabbit'>Rabbit</option>
+  <option value='Bird'>Bird</option>
+  <option value='Fish'>Fish</option>
+  <option value='Hen'>Hen</option>
  </select>
 </fieldset>
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box   w-full border p-4">
   <label className="label text-xl">Date</label>
-  <input type="date" name='Dete' className="input w-full" placeholder="Enter your Description" />
+  <input type="date" name='Date' className="input w-full" placeholder="Enter your Description" />
 </fieldset>
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">Location</label>
@@ -79,4 +100,4 @@ const LostandFound = () => {
     );
 };
 
-export default LostandFound;
+export default AddLostandFound;
