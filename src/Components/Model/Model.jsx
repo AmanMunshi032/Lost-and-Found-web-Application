@@ -14,7 +14,7 @@ const Model = () => {
         <>
        <div className='flex justify-center items-center'>
   <div className="w-16 " >
-    <img  className='rounded-full  'src={user&& user.photoURL} />
+    <img  className='rounded-full  'src={user&& user?.photoURL} />
   </div>
        </div>
 <div className='text-center mb-3'>
@@ -31,7 +31,7 @@ const Model = () => {
   <label className="label text-xl">Date</label>
   <input type="date" name='Date' className="input w-full" placeholder="Enter your Description" />
 </fieldset>
-  <button className='btn btn-primary w-full'>submit</button>
+  <button className='btn btn-secondary w-full'>submit</button>
         </form>
         </>
        

@@ -6,8 +6,9 @@ const Ditelspages = () => {
     const[ditels,setditels]=useState({})
     const {id}=useParams()
     const Cartditels = useLoaderData()
+   
        useEffect(()=>{
-        const newdata = Cartditels.filter((singleditels)=>singleditels._id ==id)
+         const newdata = Cartditels.filter((singleditels)=>singleditels._id ==id)
         setditels(newdata)
        },[id,Cartditels])
     return (

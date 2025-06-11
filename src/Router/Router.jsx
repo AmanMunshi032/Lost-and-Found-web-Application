@@ -10,6 +10,8 @@ import PrivetRoutes from "./PrivetRoutes";
 import AddLostandFound from "../Pages/AddLostandFound/AddLostandFound";
 import LostFount from "../Pages/LostFount/LostFount";
 import Ditelspages from "../Pages/Ditelspage/Ditelspages";
+import MyitemsPage from "../Pages/MyItemsPage/MytemsPage";
+import Update from "../Components/Update/Update";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -44,6 +46,19 @@ import Ditelspages from "../Pages/Ditelspage/Ditelspages";
            hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
           loading-xl"></span></p>,
           loader:()=>fetch('http://localhost:3000/Collections')
+        },
+        {
+          path:'/MyitemsPage',
+          element:<PrivetRoutes>
+            <MyitemsPage></MyitemsPage>
+          </PrivetRoutes>,
+         
+        },
+        {
+          path:'/Update',
+          element:<PrivetRoutes>
+            <Update></Update>
+          </PrivetRoutes>
         },
         {
           path:'/Register',

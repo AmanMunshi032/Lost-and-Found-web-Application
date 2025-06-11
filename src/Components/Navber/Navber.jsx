@@ -1,5 +1,5 @@
 
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink,} from 'react-router';
 import "./Navber.css";
 import { use } from 'react';
 import { Authcontext } from '../../Context/Authcontext';
@@ -8,7 +8,8 @@ import Petlogo from '../../assets/pet.png'
 import { toast } from 'react-toastify';
 const Navber = () => {
   const {user,sigout }=use(Authcontext)
-  // console.log(user)
+  
+
    const hendalsingout =()=>{
      sigout().then(()=>{
       toast("logout succesfull")
@@ -17,6 +18,7 @@ const Navber = () => {
     const links = <>
     <li className='font-semibold text-lg'><NavLink to= '/'>Home</NavLink></li>
     <li className='font-semibold text-lg'><NavLink to= '/Lostandfound'>Lost & Found </NavLink></li>
+    
  </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -71,7 +73,7 @@ const Navber = () => {
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-center">
            <li className='font-bold text-xl '><NavLink to= '/AddLostandFound'> Add Lost & Found </NavLink></li>
-        <li> {user && user.email} </li>
+      <li className='font-semibold text-lg'><NavLink to= {`/MyitemsPage`}>My items Page </NavLink></li>
         <li><button onClick={hendalsingout} className='btn btn-primary'>Logout</button></li>
       </ul>
     </div>

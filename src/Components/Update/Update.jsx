@@ -1,55 +1,14 @@
 import React, { use } from 'react';
 import { Authcontext } from '../../Context/Authcontext';
-import Swal from 'sweetalert2';
 
-const AddLostandFound = () => {
-  const{user}=use(Authcontext)
-   const hendalform =(e)=>{
-     e.preventDefault()
-     const form =e.target
-       const formdata = new FormData(form)
-  const Updatedata = Object.fromEntries(formdata.entries())
-  const Items={
-    Name:user.displayName,
-    email:user.email,
-    postType:Updatedata.postType,
-    TaskTitle:Updatedata.TaskTitle, 
-    Category:Updatedata.Category,
-    Location:Updatedata.Location,
-    photo:Updatedata.photo,
-    Description:Updatedata.Description,
-    Date:Updatedata.Date,
-
-
-  }
-   
-  fetch('http://localhost:3000/users',{
-    method:"POST",
-    headers:{
-       'content-type':'application/json'
-    },
-    body:JSON.stringify( Items)
-  })
-  .then(res=> res.json())
-  .then(data=>{
-    console.log('after data is',data)
-    Swal.fire({
-  icon: "success",
-  title: "Your Data has been successfully..!",
-  showConfirmButton: false,
-  timer: 1500
-});
-  })
-
-
-   }
-  
+const Update = () => {
+    const {user}=use(Authcontext)
     return (
-        <div className='px-8 py-4 bg-indigo-200'>
+           <div className='px-8 py-4 bg-indigo-200'>
           <div className='p-12 text-center space-y-4'>
-                <h1 className='text-5xl font-bold text-amber-400'>Add Lost & Found Item</h1>
+                <h1 className='text-5xl font-bold text-blue-500'> UPdate Lost & Found Items</h1>
         </div>
-        <form  onSubmit={hendalform }>
+        <form >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-3'> 
 <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">PostType</label>
@@ -106,10 +65,10 @@ const AddLostandFound = () => {
  </textarea>
 </fieldset>   
 
-<button className='btn bg-cyan-700 w-full mt-3 text-white' >Add Post</button>
+<button className='btn bg-cyan-700 w-full mt-3 text-white' >Update</button>
         </form>
       </div>
     );
 };
 
-export default AddLostandFound;
+export default Update;

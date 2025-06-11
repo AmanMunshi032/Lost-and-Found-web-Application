@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Lostandfoundcard = ({ditel}) => {
   console.log(ditel)
-    const{ _id,photo,TaskTitle, Location,Description,Category,Date,petType }=ditel
+    const{ _id,photo,TaskTitle, Location,Description,Category,Date,postType }=ditel
     
     return (
               <div className="card bg-base-100 shadow-sm rounded-t-3xl">
@@ -18,7 +18,7 @@ const Lostandfoundcard = ({ditel}) => {
       <div className="badge badge-secondary">{Category}</div>
     </h2>
     <p>{Description}</p>
-    <div className="badge badge-info text-white">{petType}</div>
+    <div className="badge badge-info text-white">{postType}</div>
     
     <div className="card-actions justify-between">
       <div className="badge badge-outline">{Location}</div>
