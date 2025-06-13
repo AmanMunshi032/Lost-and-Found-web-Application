@@ -56,8 +56,11 @@ import Update from "../Components/Update/Update";
         },
         {
           path:'/Update/:id',
+          element:<PrivetRoutes>
+            <Update></Update>
+          </PrivetRoutes>,
             loader:({params})=> fetch(`http://localhost:3000/Collections/${params.id}`),
-          Component:Update ,
+         
        
         },
         {

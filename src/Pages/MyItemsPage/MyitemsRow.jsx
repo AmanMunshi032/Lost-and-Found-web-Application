@@ -2,7 +2,7 @@ import React from 'react';
 import { MdBrowserUpdated, MdDelete } from "react-icons/md";
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
-const MyitemsRow = ({Application,index}) => {
+const MyitemsRow = ({Application,index,setApplications,Applications}) => {
 const { _id,photo,Category,TaskTitle,Date}=Application
 
 const hendalDelete =(_id)=>{
@@ -31,6 +31,10 @@ const hendalDelete =(_id)=>{
       text: "Your Data has been deleted.",
       icon: "success"
     });
+
+    //remove data 
+    const remainingdata =Applications.filter((cof)=>cof._id !==_id)
+    setApplications(remainingdata)
   }
  
  })

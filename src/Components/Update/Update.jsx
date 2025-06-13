@@ -6,7 +6,6 @@ import { useLoaderData } from 'react-router';
 
 const Update = () => {
    const {postType ,Date, Location,Category,Description ,TaskTitle,photo,_id}=useLoaderData()
-    console.log(Date)
     const {user}=use(Authcontext)
   
     const hendelupdateform =(e)=>{

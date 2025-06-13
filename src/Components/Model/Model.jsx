@@ -1,14 +1,36 @@
 import React, { use } from 'react';
 import { Authcontext } from '../../Context/Authcontext';
+import { useParams } from 'react-router';
+import { toast } from 'react-toastify';
 
 const Model = () => {
     const {user}=use(Authcontext)
+    const {id:modelId}=useParams()
+    
      const hendalModel =(e)=>{
          e.preventDefault();
          const form = e.target
          const Location= form.Location.value;
          const Date = form.Date.value;
          console.log(Location,Date)
+         const Recoverdata ={
+           modelId,
+           Location,
+           Date,
+           email:user.email
+         }
+       fetch('http://localhost:3000/myitems',{
+        method:'POST',
+        headers:{
+           'content-type':'application/json'
+        },
+        body:JSON.stringify(Recoverdata)
+       })
+       .then(res=> res.json())
+       .then(data=>{
+        console.log(data)
+        toast("Your Recover data has ben successfully..!")
+       })
      }
     return (
         <>
