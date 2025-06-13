@@ -3,7 +3,7 @@ import MyitemsRow from './MyitemsRow';
 
 const Myitemstable = ({myApplicationsPromise}) => {
     const Applications = use(myApplicationsPromise)
-    console.log(Applications)
+   
     return (
         <div className="overflow-x-auto">
   <table className="table">

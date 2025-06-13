@@ -1,8 +1,46 @@
 import React from 'react';
 import { MdBrowserUpdated, MdDelete } from "react-icons/md";
 import { Link } from 'react-router';
+import Swal from 'sweetalert2';
 const MyitemsRow = ({Application,index}) => {
-const {photo,Category,TaskTitle,Date}=Application
+const { _id,photo,Category,TaskTitle,Date}=Application
+
+const hendalDelete =(_id)=>{
+    console.log(_id)
+  Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  
+
+  if (result.isConfirmed) {
+// face delet data 
+ fetch(`http://localhost:3000/Collections/${_id}`,{
+  method:"DELETE"
+ })
+ .then(res=> res.json())
+ .then (data=>{
+  if(data.deletedCount){
+   Swal.fire({
+      title: "Deleted!",
+      text: "Your Data has been deleted.",
+      icon: "success"
+    });
+  }
+ 
+ })
+
+
+  
+  }
+});
+
+}
     return (
         <>
            <tr>
@@ -31,11 +69,11 @@ const {photo,Category,TaskTitle,Date}=Application
         </td>
         <td>{Date}</td>
         <th>
-            <Link to='/Update'>
+            <Link to={`/Update/${_id}`}>
        <button className="btn btn-ghost btn-xs">{<MdBrowserUpdated size={24} />}</button>
             </Link>
          
-          <button className="btn btn-ghost btn-xs">{<MdDelete size={24}/>}</button>
+          <button  onClick={ ()=> hendalDelete(_id)} className="btn btn-ghost btn-xs">{<MdDelete size={24}/>}</button>
         </th>
       </tr>  
         </>

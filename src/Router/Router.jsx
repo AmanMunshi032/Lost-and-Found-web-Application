@@ -52,13 +52,13 @@ import Update from "../Components/Update/Update";
           element:<PrivetRoutes>
             <MyitemsPage></MyitemsPage>
           </PrivetRoutes>,
-         
+            
         },
         {
-          path:'/Update',
-          element:<PrivetRoutes>
-            <Update></Update>
-          </PrivetRoutes>
+          path:'/Update/:id',
+            loader:({params})=> fetch(`http://localhost:3000/Collections/${params.id}`),
+          Component:Update ,
+       
         },
         {
           path:'/Register',
