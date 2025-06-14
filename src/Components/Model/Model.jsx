@@ -35,8 +35,8 @@ const Model = () => {
     return (
         <>
        <div className='flex justify-center items-center'>
-  <div className="w-16 " >
-    <img  className='rounded-full  'src={user&& user?.photoURL} />
+  <div className="  " >
+    <img  className=' h-16 w-16 rounded-full  'src={user&& user?.photoURL} />
   </div>
        </div>
 <div className='text-center mb-3'>

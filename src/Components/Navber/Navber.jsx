@@ -75,7 +75,7 @@ const Navber = () => {
            <li className='font-bold text-xl '><NavLink to= '/AddLostandFound'> Add Lost & Found </NavLink></li>
       <li className='font-semibold text-lg'><NavLink to= {`/MyitemsPage`}>My items Page </NavLink></li>
       
-      <li className='font-semibold text-lg'><NavLink to= {`/AllRecoveritems`}>All Recover items </NavLink></li>
+      <li className='font-semibold text-lg'><NavLink to= {`/AllRecovercard`}>All Recover items </NavLink></li>
 
         <li><button onClick={hendalsingout} className='btn btn-primary'>Logout</button></li>
       </ul>

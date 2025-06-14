@@ -4,6 +4,7 @@ const AllRecoverRow = ({recover, index}) => {
     const{photo,Location,Date,TaskTitle} =recover
     return (
         <>
+       
                 <tr >
               <th className='border-2'>
                    {index+1} 

@@ -13,6 +13,7 @@ import Ditelspages from "../Pages/Ditelspage/Ditelspages";
 import MyitemsPage from "../Pages/MyItemsPage/MytemsPage";
 import Update from "../Components/Update/Update";
 import AllRecoveritems from "../Pages/AllRecoveritems/AllRecoveritems";
+import AllRecovercard from "../Pages/AllRecoverCard/AllRecovercard";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -69,8 +70,13 @@ import AllRecoveritems from "../Pages/AllRecoveritems/AllRecoveritems";
           element:<PrivetRoutes>
            <AllRecoveritems></AllRecoveritems>
           </PrivetRoutes>
-        }
-        ,
+        } ,
+        {
+         path:'/AllRecovercard',
+          element:<PrivetRoutes>
+            <AllRecovercard></AllRecovercard>
+          </PrivetRoutes>
+        },
         {
           path:'/Register',
           Component:Register

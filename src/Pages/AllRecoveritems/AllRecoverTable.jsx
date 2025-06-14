@@ -1,10 +1,26 @@
 import React, { use } from 'react';
 import AllRecoverRow from './AllRecoverRow';
+import { RiLayoutGrid2Fill } from "react-icons/ri";
+import { MdTableRows } from "react-icons/md";
+import { Link } from 'react-router';
 
 const AllRecoverTable = ({Recoverdata}) => {
     const ApplyData= use(Recoverdata)
   
     return (
+     <>
+     <div className=' card-actions justify-end  bg-gray-200 p-3 '>
+      {/* card icon */}
+    <Link to='/AllRecovercard'>
+      < > <RiLayoutGrid2Fill size={26} />
+      </>
+    </Link>
+      {/* table icon */}
+       <Link to='/AllRecoveritems'>
+         <><MdTableRows  size={26}/></>
+       </Link>
+
+    </div>
         <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
@@ -37,6 +53,7 @@ const AllRecoverTable = ({Recoverdata}) => {
    
   </table>
 </div>
+</>
     );
 };
 
