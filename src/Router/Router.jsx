@@ -12,6 +12,7 @@ import LostFount from "../Pages/LostFount/LostFount";
 import Ditelspages from "../Pages/Ditelspage/Ditelspages";
 import MyitemsPage from "../Pages/MyItemsPage/MytemsPage";
 import Update from "../Components/Update/Update";
+import AllRecoveritems from "../Pages/AllRecoveritems/AllRecoveritems";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -63,6 +64,13 @@ import Update from "../Components/Update/Update";
          
        
         },
+        {
+          path:'/AllRecoveritems',
+          element:<PrivetRoutes>
+           <AllRecoveritems></AllRecoveritems>
+          </PrivetRoutes>
+        }
+        ,
         {
           path:'/Register',
           Component:Register

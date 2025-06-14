@@ -74,6 +74,9 @@ const Navber = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-center">
            <li className='font-bold text-xl '><NavLink to= '/AddLostandFound'> Add Lost & Found </NavLink></li>
       <li className='font-semibold text-lg'><NavLink to= {`/MyitemsPage`}>My items Page </NavLink></li>
+      
+      <li className='font-semibold text-lg'><NavLink to= {`/AllRecoveritems`}>All Recover items </NavLink></li>
+
         <li><button onClick={hendalsingout} className='btn btn-primary'>Logout</button></li>
       </ul>
     </div>
