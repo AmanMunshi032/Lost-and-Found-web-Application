@@ -27,7 +27,7 @@ const AllRecoverTable = ({Recoverdata}) => {
     <thead className='border-2'>
       <tr >
         <th>
-          
+          0
         </th>
         <th className='text-center'>photo</th>
         <th className='text-center'> Recover Location</th>

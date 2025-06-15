@@ -22,7 +22,7 @@ const AllRecovercardCollum = ({Recoverdata}) => {
        </Link>
 
     </div>
-        <div className='grid grid-cols-1  md:grid-cols-3 max-w-6xl mx-auto gap-5'>
+        <div className='grid grid-cols-1  md:grid-cols-3 max-w-6xl mx-auto gap-5 p-3 md:p-0'>
          {
           Tanvir.map((Tan)=><AllRecoverGrid Tan={Tan}></AllRecoverGrid>)
          }

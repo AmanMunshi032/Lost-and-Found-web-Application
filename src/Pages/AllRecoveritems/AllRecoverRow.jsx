@@ -12,7 +12,7 @@ const AllRecoverRow = ({recover, index}) => {
         <td className='border-2'>
           <div className="flex items-center gap-3 ">
             <div >
-              <div className=" ">
+              <div className="mask mask-squircle h-12 w-12">
                 <img className=' flex justify-center items-center rounded-2xl  h-14 w-14'
                   src={photo}
                   alt="Avatar Tailwind CSS Component" />
