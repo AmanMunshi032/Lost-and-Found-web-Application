@@ -14,6 +14,7 @@ import MyitemsPage from "../Pages/MyItemsPage/MytemsPage";
 import Update from "../Components/Update/Update";
 import AllRecoveritems from "../Pages/AllRecoveritems/AllRecoveritems";
 import AllRecovercard from "../Pages/AllRecoverCard/AllRecovercard";
+import Model from "../Components/Model/Model";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -25,14 +26,14 @@ import AllRecovercard from "../Pages/AllRecoverCard/AllRecovercard";
             Component:Home,
             hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
           loading-xl"></span></p>,
-            loader:()=>fetch('http://localhost:3000/users')
+            loader:()=>fetch('https://server-side-assingment.vercel.app/users')
         },
         {
           path:'/Lostandfound',
           Component:LostFount,
             hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
           loading-xl"></span></p>,
-          loader:()=>fetch('http://localhost:3000/Collections')
+          loader:()=>fetch('https://server-side-assingment.vercel.app/Collections')
         },
         {
          path:'/AddLostandFound',
@@ -47,7 +48,7 @@ import AllRecovercard from "../Pages/AllRecoverCard/AllRecovercard";
           </PrivetRoutes>,
            hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
           loading-xl"></span></p>,
-          loader:()=>fetch('http://localhost:3000/Collections')
+          loader:()=>fetch('https://server-side-assingment.vercel.app/Collections')
         },
         {
           path:'/MyitemsPage',
@@ -61,9 +62,16 @@ import AllRecovercard from "../Pages/AllRecoverCard/AllRecovercard";
           element:<PrivetRoutes>
             <Update></Update>
           </PrivetRoutes>,
-            loader:({params})=> fetch(`http://localhost:3000/Collections/${params.id}`),
-         
-       
+            loader:({params})=> fetch(`https://server-side-assingment.vercel.app/Collections/${params.id}`),
+        
+        },
+        {
+          path:'/Model/:id',
+          element:<PrivetRoutes>
+            <Model></Model>
+          </PrivetRoutes>,
+          loader:({params})=> fetch(`https://server-side-assingment.vercel.app/Collections/${params.id}`)
+          
         },
         {
           path:'/AllRecoveritems',

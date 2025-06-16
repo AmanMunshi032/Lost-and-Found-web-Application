@@ -23,7 +23,7 @@ const AddLostandFound = () => {
 
   }
    
-  fetch('http://localhost:3000/users',{
+  fetch('https://server-side-assingment.vercel.app/users',{
     method:"POST",
     headers:{
        'content-type':'application/json'

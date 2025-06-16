@@ -20,7 +20,7 @@ const hendalDelete =(_id)=>{
 
   if (result.isConfirmed) {
 // face delet data 
- fetch(`http://localhost:3000/Collections/${_id}`,{
+ fetch(`https://server-side-assingment.vercel.app/Collections/${_id}`,{
   method:"DELETE"
  })
  .then(res=> res.json())

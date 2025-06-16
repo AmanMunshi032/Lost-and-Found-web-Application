@@ -1,12 +1,11 @@
 import React, { use } from 'react';
-import { Authcontext } from '../../Context/Authcontext';
-import {   useParams } from 'react-router';
 import { toast } from 'react-toastify';
+import { Authcontext } from '../../Context/Authcontext';
+import { useParams } from 'react-router';
 
-const Model = ({ditels}) => {
-   const {Date, Location, _id}=ditels
+const Model2 = ({ditels}) => {
 
-  
+       const {Date,Location,_id}=ditels
     const {user}=use(Authcontext)
     const {id:modelId}=useParams()
      const hendalModel =(e)=>{
@@ -22,7 +21,7 @@ const Model = ({ditels}) => {
            email:user.email
          }
        
-        fetch(`https://server-side-assingment.vercel.app/Collections/${_id}`,{
+        fetch(`https://server-side-assingment.vercel.app/Collections`,{
           method:'PATCH',
          headers: {
     'Content-Type': 'application/json',
@@ -48,7 +47,7 @@ const Model = ({ditels}) => {
        })
      }
     return (
-        <>
+          <>
        <div className='flex justify-center items-center'>
   <div className="  " >
     <img  className=' h-16 w-16 rounded-full  'src={user&& user?.photoURL} />
@@ -71,8 +70,7 @@ const Model = ({ditels}) => {
   <button className='btn btn-secondary w-full'>submit</button>
         </form>
         </>
-       
     );
 };
 
-export default Model;
+export default Model2;

@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Lostandfoundcard = ({ditel}) => {
-  console.log(ditel)
     const{ _id,photo,TaskTitle, Location,Description,Category,Date,postType }=ditel
-    
     return (
               <div className="card bg-base-100 shadow-sm rounded-t-3xl">
   <figure>

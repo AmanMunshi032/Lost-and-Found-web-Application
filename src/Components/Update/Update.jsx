@@ -6,6 +6,8 @@ import { useLoaderData } from 'react-router';
 
 const Update = () => {
    const {postType ,Date, Location,Category,Description ,TaskTitle,photo,_id}=useLoaderData()
+
+ 
     const {user}=use(Authcontext)
   
     const hendelupdateform =(e)=>{
@@ -13,7 +15,7 @@ const Update = () => {
       const form = e.target;
     const formdata = new FormData(form)
   const updateData = Object.fromEntries(formdata.entries())
-   fetch(`http://localhost:3000/Collections/${_id}`,{
+   fetch(`https://server-side-assingment.vercel.app/Collections/${_id}`,{
      method:"PUT",
          headers:{
          'content-type':'application/json'
