@@ -1,8 +1,8 @@
 import React, { use, useState } from 'react';
 import MyitemsRow from './MyitemsRow';
 
-const Myitemstable = ({myApplicationsPromise}) => {
-    const initialApplications = use(myApplicationsPromise)
+const Myitemstable = ({myApplicationPromise}) => {
+    const initialApplications = use(myApplicationPromise)
     const [Applications,setApplications]=useState(initialApplications)
     return (
         <div className="overflow-x-auto">

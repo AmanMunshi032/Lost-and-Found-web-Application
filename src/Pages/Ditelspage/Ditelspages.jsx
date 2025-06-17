@@ -13,7 +13,7 @@ const Ditelspages = () => {
          const newdata = Cartditels.find((singleditels)=>singleditels._id ==id)
         console.log(id, Cartditels)
         setditels(newdata)
-       },[])
+       },[id, Cartditels])
             
     return (
         <div>
