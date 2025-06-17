@@ -6,7 +6,7 @@ const Lostcard = ({lost}) => {
 
     return (
        <div className="card bg-base-100  shadow-sm">
-  <figure className="px-10 pt-10">
+  <figure className="">
     <img
       src={photo}
       alt="Shoes"
