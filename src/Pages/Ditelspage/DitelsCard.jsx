@@ -5,7 +5,7 @@ import Model2 from "../../Components/Model/Model2";
 const DitelsCard = ({ ditels }) => {
   const { TaskTitle, photo, Date, Location, Category, Description, postType } =
     ditels ||{}
-    console.log(ditels)
+    // console.log(ditels)
   return (
     <div className="md:w-2xl mx-auto  my-6 p-8 bg-gray-100 shadow-sm rounded-2xl">
       <div className="flex justify-center items-center">

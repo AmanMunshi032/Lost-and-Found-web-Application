@@ -2,6 +2,8 @@ import React from 'react';
 import Slidersection from '../../Components/Sliderimg/Sliderimg';
 import LatestFindlost from './LatesFind&lost/LatestFindlost';
 import { Link, useLoaderData } from 'react-router';
+import Lostpets from './Lostpets/Lostpets';
+import Foundpetes from './Foundpetes/Foundpetes';
 
 
 const Home = () => {
@@ -20,6 +22,8 @@ const Home = () => {
         </Link>
           </div>  
       </div>
+      <Lostpets></Lostpets>
+      <Foundpetes></Foundpetes>
         </div>
     );
 };

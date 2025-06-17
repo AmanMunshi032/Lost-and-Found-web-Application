@@ -7,7 +7,6 @@ import UasApplicationApi from "../../Api/UasApplicationApi";
 const MyitemsPage = () => {
  const {user}=use(Authcontext)
  const { myApplicationPromise} = UasApplicationApi()
- console.log('my token ', user.accessToken)
 
     return (
         <div>

@@ -15,6 +15,7 @@ import Update from "../Components/Update/Update";
 import AllRecoveritems from "../Pages/AllRecoveritems/AllRecoveritems";
 import AllRecovercard from "../Pages/AllRecoverCard/AllRecovercard";
 import Model from "../Components/Model/Model";
+import Lostpets from "../Pages/Home/Lostpets/Lostpets";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -35,6 +36,7 @@ import Model from "../Components/Model/Model";
           loading-xl"></span></p>,
           loader:()=>fetch('https://server-side-assingment.vercel.app/Collections')
         },
+      
         {
          path:'/AddLostandFound',
           element:<PrivetRoutes>

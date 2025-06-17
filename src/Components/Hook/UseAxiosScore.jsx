@@ -9,8 +9,16 @@ const AxiousInstant= axios.create({
 const UseAxiosScore = () => {
 const {user}=use(Authcontext)
   AxiousInstant.interceptors.request.use(config=>{
-    config.headers.authorization= `Bearer ${user.accessToken}`
+        config.headers.authorization= `Bearer ${user.accessToken}`
     return config ;
+  })
+
+  // response intercepor
+  AxiousInstant.interceptors.request.use(Response =>{
+    return Response
+  } , error => {
+  console.log('error in interport', error)
+     return Promise.reject(error)
   })
     return  AxiousInstant;
 };
