@@ -5,7 +5,7 @@ const FoundCard = ({found}) => {
     if(postType == "Found"){
     return (
          <div className="card bg-base-100  shadow-sm">
-  <figure className="px-10 pt-10">
+  <figure className=" pt-1">
     <img
       src={photo}
       alt="Shoes"

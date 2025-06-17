@@ -16,14 +16,16 @@ const Home = () => {
         {
           pets.map((pet)=>< LatestFindlost key={pet._id} pet={pet}></ LatestFindlost>)
         }
-        <div className='flex justify-end lg:w-5xl  my-3'>
+
+      </div>
+      <Lostpets></Lostpets>
+      <Foundpetes></Foundpetes>
+  <div className='flex justify-end lg:w-5xl mx-auto my-3'>
         <Link to='/Lostandfound'>
           <button className="btn btn-soft btn-warning font-bold"> see all</button>
         </Link>
           </div>  
-      </div>
-      <Lostpets></Lostpets>
-      <Foundpetes></Foundpetes>
+
         </div>
     );
 };

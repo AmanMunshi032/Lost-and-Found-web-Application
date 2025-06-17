@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Lostcard = ({Lost}) => {
-    const{postType, photo, Description, TaskTitle, Location, Date}= Lost
+const Lostcard = ({lost}) => {
+    const{postType, photo, Description, TaskTitle, Location, Date}= lost
     if(postType == "Lost"){
 
     return (
