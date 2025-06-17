@@ -6,11 +6,6 @@ A full-stack web application to help users post and find lost or found items. Bu
 
 [Visit Live Site](https://your-live-site-link.com)
 
-## 📁 Repositories
-
-- **Client Repository:** [GitHub - Client](https://github.com/your-client-repo)
-- **Server Repository:** [GitHub - Server](https://github.com/your-server-repo)
-
 ---
 
 ## 📌 Features
