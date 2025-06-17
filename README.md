@@ -4,7 +4,7 @@ A full-stack web application to help users post and find lost or found items. Bu
 
 ## 🌐 Live Site
 
-[Visit Live Site](https://your-live-site-link.com)
+[Visit Live Site](https://assingment-4494e.web.app)
 
 ---
 
@@ -31,13 +31,13 @@ A full-stack web application to help users post and find lost or found items. Bu
   - 2 Extra meaningful sections
   - Framer Motion animations
 
-- 📥 **Add Lost & Found Item** (`/addItems`)
+- 📥 **Add Lost & Found Item** 
   - Protected form with fields like title, category, location, date, etc.
   - Auto-filled user contact info
   - React Datepicker integration
   - Saves to MongoDB with success toast
 
-- 🔍 **Post Details Page** (`/items/:id`)
+- 🔍 **Post Details Page** 
   - All item details displayed
   - Conditional action button:
     - Found This!
@@ -45,17 +45,17 @@ A full-stack web application to help users post and find lost or found items. Bu
   - Opens modal with recovery info
   - On submit: marks item as recovered
 
-- 🗃️ **All Items Page** (`/allItems`)
+- 🗃️ **All Items Page** 
   - Cards for all Lost & Found posts
   - View Details button
   - Search by title or location
 
-- 🛠️ **Manage My Items** (`/myItems`)
+- 🛠️ **Manage My Items** 
   - Table showing user's posts
   - Update/Delete functionalities
   - Update page pre-fills data
 
-- ♻️ **All Recovered Items** (`/allRecovered`)
+- ♻️ **All Recovered Items** 
   - 3-column card layout
   - Layout toggle to table view
   - Shows recovery info
