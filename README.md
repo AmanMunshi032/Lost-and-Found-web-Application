@@ -4,7 +4,7 @@ A full-stack web application to help users post and find lost or found items. Bu
 
 ## 🌐 Live Site
 
-[Visit Live Site](https://assingment-4494e.web.app)
+[Visit Live Site](https://assingment-4494e.web.app/)
 
 ---
 
