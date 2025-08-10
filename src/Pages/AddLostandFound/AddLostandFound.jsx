@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Authcontext } from '../../Context/Authcontext';
 import Swal from 'sweetalert2';
 
+
 const AddLostandFound = () => {
   const{user}=use(Authcontext)
    const hendalform =(e)=>{
@@ -45,7 +46,8 @@ const AddLostandFound = () => {
    }
   
     return (
-        <div className='px-8 py-4  mt-10'>
+    <div className=''>
+        <div className='px-8 py-4 mt-10'>
           <div className='p-12 text-center space-y-4'>
                 <h1 className='text-4xl font-bold text-orange-500'>Add Lost & Found Item</h1>
         </div>
@@ -109,6 +111,7 @@ const AddLostandFound = () => {
 <button className='btn bg-gray-100 w-full mt-3 text-orange-500 font-bold' >Add Post</button>
         </form>
       </div>
+    </div>
     );
 };
 

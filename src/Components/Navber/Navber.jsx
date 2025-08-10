@@ -1,11 +1,18 @@
 import { Link, NavLink } from "react-router";
 import "./Navber.css";
-import { use } from "react";
+import { use, useState } from "react";
 import { Authcontext } from "../../Context/Authcontext";
 import { Tooltip } from "react-tooltip";
 import Petlogo from "../../assets/pet.png";
 import { toast } from "react-toastify";
+
+import { CiLight } from "react-icons/ci";
+import { MdDarkMode } from "react-icons/md";
+import {useDarkMode}from "../Darkthem/Darktheme"
+
 const Navber = () => {
+  const {Darkmode ,setDarkmode}=useDarkMode()
+   const [show,setshow]=useState(false)
   const { user, sigout } = use(Authcontext);
 
   const hendalsingout = () => {
@@ -13,6 +20,9 @@ const Navber = () => {
       toast("logout succesfull");
     });
   };
+     const handelshow =()=>{
+    setshow(!show)
+   }
   const links = (
     <>
       <li className="font-semibold text-lg">
@@ -73,9 +83,11 @@ const Navber = () => {
         
         </ul>
       </div>
+     
       <div className="navbar-end gap-4 mr-8">
+               <button  onClick={ ()=> {handelshow(),setDarkmode(!Darkmode)}}>{Darkmode? <CiLight size={28} />:<MdDarkMode size={28} />}</button>
         {!user? (
-           <>
+             <>
            <div className="hidden lg:flex gap-3">
               <Link to="/Register">
               <button className="btn bg-orange-500 font-bold">Register</button>
@@ -85,7 +97,7 @@ const Navber = () => {
             </Link> 
            </div>
           </>
-        ) : (
+        ): (
            <div>
           <div className="dropdown dropdown-end">
             <div

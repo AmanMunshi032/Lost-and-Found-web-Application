@@ -68,7 +68,7 @@ const Model = ({ditels}) => {
   <label className="label text-xl">Date</label>
   <input type="date" name='Date'  defaultValue={Date} className="input w-full" placeholder="Enter your Description" />
 </fieldset>
-  <button className='btn btn-secondary w-full'>submit</button>
+  <button className='btn bg-orange-500 text-white w-full'>submit</button>
         </form>
         </>
        

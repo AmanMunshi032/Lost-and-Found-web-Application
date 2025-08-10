@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
     return (
-        <div>
+        <div className=''>
             <footer  className="  bg-base-200 shadow-sm ">
   <div  className="  md:flex md:justify-around  md:items-center   max-w-7xl mx-auto px-6 py-12 ">
     

@@ -4,8 +4,8 @@ import Model2 from "../../Components/Model/Model2";
 
 const DitelsCard = ({ ditels }) => {
   const { TaskTitle, photo, Date, Location, Category, Description, postType } =
-    ditels ||{}
-    // console.log(ditels)
+    ditels || {};
+  // console.log(ditels)
   return (
     <div className="md:w-2xl mx-auto  my-6 p-8 bg-gray-100 shadow-sm rounded-2xl">
       <div className="flex justify-center items-center">
@@ -43,7 +43,7 @@ const DitelsCard = ({ ditels }) => {
         {postType == "Found" ? (
           <>
             <button
-              className="btn btn-error w-full"
+              className="btn hover:bg-cyan-300 text-orange-500 font-bold w-full"
               onClick={() => document.getElementById("my_modal_3").showModal()}
             >
               {" "}
@@ -57,14 +57,14 @@ const DitelsCard = ({ ditels }) => {
                     ✕
                   </button>
                 </form>
-               <Model ditels={ditels}></Model>
+                <Model ditels={ditels}></Model>
               </div>
             </dialog>
           </>
         ) : (
           <>
             <button
-              className="btn btn-info w-full"
+              className="btn hover:bg-cyan-300 text-orange-500 font-bold w-full"
               onClick={() => document.getElementById("my_modal_3").showModal()}
             >
               {" "}

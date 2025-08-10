@@ -5,7 +5,7 @@ const Lostcard = ({lost}) => {
     if(postType == "Lost"){
 
     return (
-       <div className="card bg-base-100  shadow-sm">
+       <div className="card bg-base-100  shadow-sm ">
   <figure className="">
     <img
       src={photo}

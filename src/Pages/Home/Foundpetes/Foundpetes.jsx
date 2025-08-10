@@ -14,7 +14,7 @@ const Foundpetes = () => {
     
     return (
         <>
-         <h1 className='text-4xl text-orange-500 my-8 font-bold lg:w-5xl lg:mx-auto px-6 lg:px-0'> Found pets items </h1>
+         <h1 className='text-4xl text-orange-500 my-8 font-bold lg:w-6xl lg:mx-auto px-6 lg:px-0'> Found pets items </h1>
           <div className='lg:w-6xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 px-6 lg:px-0'>
             {
                 Founddata.map((found)=> <FoundCard found={found}></FoundCard>)

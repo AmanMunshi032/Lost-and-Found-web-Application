@@ -8,12 +8,14 @@ import RecentlyFoundItems from './RecentlyFound/RecentlyFoundItems';
 
 
 
+
 const Home = () => {
   const pets = useLoaderData()  
     return (
-        <div>
+ 
+        <div className=''>
         <Slidersection></Slidersection>
-          <h1 className='text-4xl my-8 font-bold lg:w-5xl lg:mx-auto px-6 lg:px-0 text-orange-500'>Latest Find & Lost Items Section</h1>
+          <h1 className='text-4xl my-8 font-bold lg:w-6xl lg:mx-auto px-6 lg:px-0 text-orange-500'>Latest Find & Lost Items Section</h1>
       <div className='lg:w-6xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 px-6 lg:px-0'>
         {
           pets.map((pet)=>< LatestFindlost key={pet._id} pet={pet}></ LatestFindlost>)
@@ -32,6 +34,7 @@ const Home = () => {
          </div>
          
         </div>
+        
     );
 };
 
