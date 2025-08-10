@@ -16,8 +16,8 @@ const Lostpets = () => {
      console.log(lostdata)
     return (
         <>
-        <h1 className='text-4xl my-8 font-bold lg:w-5xl lg:mx-auto px-6 lg:px-0'> Lost pets items </h1>
-        <div className='lg:w-5xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8  px-6 lg:px-0'>
+        <h1 className='text-4xl text-orange-500 my-8 font-bold lg:w-5xl lg:mx-auto px-6 lg:px-0'> Lost pets items </h1>
+        <div className='lg:w-6xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2  px-6 lg:px-0'>
            {
             lostdata.map((lost )=><Lostcard lost={lost}></Lostcard>)
            }

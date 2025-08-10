@@ -4,6 +4,8 @@ import LatestFindlost from './LatesFind&lost/LatestFindlost';
 import { Link, useLoaderData } from 'react-router';
 import Lostpets from './Lostpets/Lostpets';
 import Foundpetes from './Foundpetes/Foundpetes';
+import RecentlyFoundItems from './RecentlyFound/RecentlyFoundItems';
+
 
 
 const Home = () => {
@@ -11,8 +13,8 @@ const Home = () => {
     return (
         <div>
         <Slidersection></Slidersection>
-          <h1 className='text-4xl my-8 font-bold lg:w-5xl lg:mx-auto px-6 lg:px-0'>Latest Find & Lost Items Section</h1>
-      <div className='lg:w-5xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-6 lg:px-0'>
+          <h1 className='text-4xl my-8 font-bold lg:w-5xl lg:mx-auto px-6 lg:px-0 text-orange-500'>Latest Find & Lost Items Section</h1>
+      <div className='lg:w-6xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 px-6 lg:px-0'>
         {
           pets.map((pet)=>< LatestFindlost key={pet._id} pet={pet}></ LatestFindlost>)
         }
@@ -20,12 +22,15 @@ const Home = () => {
       </div>
       <Lostpets></Lostpets>
       <Foundpetes></Foundpetes>
-  <div className='flex justify-end lg:w-5xl mx-auto my-3'>
+  <div className='flex justify-end lg:w-6xl mx-auto my-3'>
         <Link to='/Lostandfound'>
-          <button className="btn btn-soft btn-warning font-bold"> see all</button>
+          <button className="btn  text-orange-500  hover:bg-cyan-300 font-bold"> see all</button>
         </Link>
           </div>  
-
+         <div>
+          <RecentlyFoundItems></RecentlyFoundItems>
+         </div>
+         
         </div>
     );
 };

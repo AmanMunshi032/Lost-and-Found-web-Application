@@ -5,7 +5,7 @@ const Myitemstable = ({myApplicationPromise}) => {
     const initialApplications = use(myApplicationPromise)
     const [Applications,setApplications]=useState(initialApplications)
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto mt-5">
   <table className="table">
     {/* head */}
     <thead>

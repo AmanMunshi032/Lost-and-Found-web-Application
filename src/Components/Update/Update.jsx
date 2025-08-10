@@ -36,9 +36,9 @@ const Update = () => {
    })
     }
     return (
-           <div className='px-8 py-4 bg-indigo-200'>
+           <div className='px-8 py-4  mt-10'>
           <div className='p-12 text-center space-y-4'>
-                <h1 className='text-5xl font-bold text-blue-500'> UPdate Lost & Found Items</h1>
+                <h1 className='text-4xl font-bold text-orange-500'> UPdate Lost & Found Items</h1>
         </div>
         <form  onSubmit={hendelupdateform}>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-3'> 

@@ -3,7 +3,7 @@ import React from 'react';
 const Slidersection = () => {
     return (
        <>
-       <div className="carousel w-full">
+       <div className="carousel w-full mt-16">
   <div id="item1" className="carousel-item w-full">
     <img
       src="https://i.postimg.cc/zDsGtHYR/dogs-2-HDNR7-R.jpg"

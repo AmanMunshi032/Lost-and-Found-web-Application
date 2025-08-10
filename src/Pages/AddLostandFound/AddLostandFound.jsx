@@ -45,13 +45,13 @@ const AddLostandFound = () => {
    }
   
     return (
-        <div className='px-8 py-4 bg-indigo-200'>
+        <div className='px-8 py-4  mt-10'>
           <div className='p-12 text-center space-y-4'>
-                <h1 className='text-5xl font-bold text-amber-400'>Add Lost & Found Item</h1>
+                <h1 className='text-4xl font-bold text-orange-500'>Add Lost & Found Item</h1>
         </div>
         <form  onSubmit={hendalform }>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-3'> 
-<fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
+<fieldset className="fieldset bg-gray-100  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">PostType</label>
   <select type="" name='postType' className="input w-full" placeholder="Enter 
    Category" >
@@ -60,11 +60,11 @@ const AddLostandFound = () => {
  </select>
 </fieldset>
 
- <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box w-full  border p-4">            
+ <fieldset className="fieldset bg-gray-100   border-base-300 rounded-box w-full  border p-4">            
   <label className="label text-xl">Title</label>
   <input type="text"name='TaskTitle' className="input w-full" placeholder=" Title Name" />
 </fieldset>
-<fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
+<fieldset className="fieldset bg-gray-100   border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">Category</label>
   <select type="" name='Category' className="input w-full" placeholder="Enter 
    Category" >
@@ -76,37 +76,37 @@ const AddLostandFound = () => {
   <option value='Hen'>Hen</option>
  </select>
 </fieldset>
-<fieldset className="fieldset bg-sky-300  border-base-300 rounded-box   w-full border p-4">
+<fieldset className="fieldset bg-gray-100   border-base-300 rounded-box   w-full border p-4">
   <label className="label text-xl">Date</label>
   <input type="date" name='Date' className="input w-full" placeholder="Enter your Description" />
 </fieldset>
-<fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
+<fieldset className="fieldset bg-gray-100  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">Location</label>
   <input type="text" name='Location' className="input w-full" placeholder="Enter Location" />
 </fieldset>
 
   
-<fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
+<fieldset className="fieldset bg-gray-100   border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl"> Thumbnail img</label>
   <input type="text" name='photo' className="input w-full" placeholder="Enter PhotoUrl" />
 </fieldset>
-<fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
+<fieldset className="fieldset bg-gray-100   border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">UserName</label>
     <p type="text" name='name' className=' input w-full text-xl'>{user && user.displayName
 }</p>
 </fieldset>
- <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box  w-full border p-4">
+ <fieldset className="fieldset bg-gray-100  border-base-300 rounded-box  w-full border p-4">
   <label className="label text-xl">Email</label>
    <p type="email" name='email' className=' input w-full text-xl'>{user && user.email}</p>
 </fieldset>
             </div>
-  <fieldset className="fieldset bg-sky-300  border-base-300 rounded-box w-full border p-4">
+  <fieldset className="fieldset bg-gray-100  border-base-300 rounded-box w-full border p-4">
   <label className="label text-xl ">Description</label>
  <textarea type="text" name='Description' className='border-2 text-xl bg-white' >
  </textarea>
 </fieldset>   
 
-<button className='btn bg-cyan-700 w-full mt-3 text-white' >Add Post</button>
+<button className='btn bg-gray-100 w-full mt-3 text-orange-500 font-bold' >Add Post</button>
         </form>
       </div>
     );

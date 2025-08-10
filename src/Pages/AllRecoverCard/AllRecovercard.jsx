@@ -8,7 +8,7 @@ const AllRecovercard = () => {
      const {user}= use(Authcontext)
      const {Recoverdata} = UseRecoverdata()
     return (
-        <div>
+        <div className='lg:mt-18 mt-16'>
          <Suspense fallback={<span className="loading loading-ring loading-xl"></span>}>
     <AllRecovercardCollum Recoverdata={Recoverdata (user.email)}></AllRecovercardCollum>
          </Suspense>

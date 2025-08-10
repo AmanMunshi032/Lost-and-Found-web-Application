@@ -15,11 +15,11 @@ const FoundCard = ({found}) => {
     <h2 className="card-title ">{TaskTitle}</h2>
     <p>{Description}</p>
      <div className='flex gap-6'>
-     <p className=' border-pink-700 border-2 p-2 rounded-md'>{Location}</p>
-     <p className='  border-pink-700 border-2 p-2 rounded-md'>{Date}</p>
+     <p className=' p-2 rounded-md'>{Location}</p>
+     <p className=' p-2 rounded-md'>{Date}</p>
      </div>
     <div className=" w-full">
-     <h1 className='bg-cyan-400  p-2 rounded-xl text-white font-bold'>{ postType}</h1>
+     <h1 className=' border-orange-500 border-2   p-2 rounded-xl  font-bold'>{ postType}</h1>
     </div>
   </div>
 </div>

@@ -18,7 +18,7 @@ TaskTitle.toLowerCase().includes(text.toLowerCase()) )
        <div className='flex justify-center items-center'>
         <Search hendalSerch={ hendalSerch} ></Search>
        </div>
-       <div className='lg:w-6xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12 my-5 px-6 lg:px-0'>
+       <div className='lg:w-6xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 my-5 px-6 lg:px-0'>
     {
         cards.map((ditel)=><Lostandfoundcard key={ditel._id} ditel={ditel}></Lostandfoundcard>)
     }

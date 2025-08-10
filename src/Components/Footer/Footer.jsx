@@ -23,9 +23,9 @@ const Footer = () => {
     <div>
       <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
       <div className="flex space-x-4">
-       <Link><FaFacebook  size={24}/> </Link>
-       <Link><FaGithub  size={24}/> </Link>
-       <Link><FaInstagramSquare  size={24}/> </Link>
+       <Link to='https://www.facebook.com/'><FaFacebook  size={24}/></Link>
+       <Link to='https://github.com/AmanMunshi032'><FaGithub  size={24}/> </Link>
+       <Link to='https://www.instagram.com/'><FaInstagramSquare  size={24}/> </Link>
      
       </div>
     </div>
@@ -35,7 +35,7 @@ const Footer = () => {
       <h3 className="text-lg font-semibold mb-4 ">Contact</h3>
       <p className="text-sm ">Email: Amanmunshi3236@gmail.com</p>
       <p className="text-sm ">Phone: 01928779670</p>
-     <p className="text-sm ">Address: 123 Street, City, Country</p>
+     <p className="text-sm ">Address: 123  Dhaka, City, Bangladesh</p>
     </div>
   </div>
 

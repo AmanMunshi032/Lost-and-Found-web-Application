@@ -16,6 +16,7 @@ import AllRecoveritems from "../Pages/AllRecoveritems/AllRecoveritems";
 import AllRecovercard from "../Pages/AllRecoverCard/AllRecovercard";
 import Model from "../Components/Model/Model";
 import Lostpets from "../Pages/Home/Lostpets/Lostpets";
+import About from "../Pages/About/About";
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -35,6 +36,10 @@ import Lostpets from "../Pages/Home/Lostpets/Lostpets";
             hydrateFallbackElement:<p className=' mt-72 mb-96 text-center'><span className="loading loading-bars 
           loading-xl"></span></p>,
           loader:()=>fetch('https://server-side-assingment.vercel.app/Collections')
+        },
+        {
+       path :'/About',
+       Component:About
         },
       
         {

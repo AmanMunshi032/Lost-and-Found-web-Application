@@ -9,7 +9,7 @@ const AllRecoverTable = ({Recoverdata}) => {
   
     return (
      <>
-     <div className=' card-actions justify-end  bg-gray-200 p-3 '>
+     <div className=' card-actions justify-end  bg-gray-200 p-3 lg:mt-18 mt-16'>
       {/* card icon */}
     <Link to='/AllRecovercard'>
       < > <RiLayoutGrid2Fill size={26} />

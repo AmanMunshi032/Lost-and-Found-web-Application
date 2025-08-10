@@ -5,7 +5,7 @@ Description
 }=Tan
     return (
         <>
-      <div className=" card bg-base-100 shadow-sm">
+      <div className=" card bg-base-300 shadow-sm">
   <figure>
     <img
       src={photo}
