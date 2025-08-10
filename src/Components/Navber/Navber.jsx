@@ -6,8 +6,8 @@ import { Tooltip } from "react-tooltip";
 import Petlogo from "../../assets/pet.png";
 import { toast } from "react-toastify";
 
-import { CiLight } from "react-icons/ci";
-import { MdDarkMode } from "react-icons/md";
+// import { CiLight } from "react-icons/ci";
+// import { MdDarkMode } from "react-icons/md";
 // import {useDarkMode}from "../Darkthem/Darktheme"
 
 const Navber = () => {
