@@ -5,6 +5,9 @@ import { Link, useLoaderData } from 'react-router';
 import Lostpets from './Lostpets/Lostpets';
 import Foundpetes from './Foundpetes/Foundpetes';
 import RecentlyFoundItems from './RecentlyFound/RecentlyFoundItems';
+import Contactpage from './Contactpage/Contactpage';
+import About from './Aboutpage/About';
+import Servecespage from './OurServeces/Servecespage';
 
 
 
@@ -15,22 +18,27 @@ const Home = () => {
  
         <div className=''>
         <Slidersection></Slidersection>
-          <h1 className='text-4xl my-8 font-bold lg:w-6xl lg:mx-auto px-6 lg:px-0 text-orange-500'>Latest Find & Lost Items Section</h1>
-      <div className='lg:w-6xl mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 px-6 lg:px-0'>
+          <h1 className='lg:text-5xl text-3xl my-8 font-bold text-center px-6  text-orange-500'>Latest Find & Lost Items Section</h1>
+      <div className=' grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 px-6 '>
         {
           pets.map((pet)=>< LatestFindlost key={pet._id} pet={pet}></ LatestFindlost>)
         }
 
       </div>
-      <Lostpets></Lostpets>
-      <Foundpetes></Foundpetes>
-  <div className='flex justify-end lg:w-6xl mx-auto my-3'>
+      <About></About>
+      <Servecespage></Servecespage>
+      {/* <Lostpets></Lostpets>
+      <Foundpetes></Foundpetes> */}
+  <div className='flex justify-end p-6 my-3'>
         <Link to='/Lostandfound'>
           <button className="btn  text-orange-500  hover:bg-cyan-300 font-bold"> see all</button>
         </Link>
           </div>  
          <div>
           <RecentlyFoundItems></RecentlyFoundItems>
+         </div>
+         <div>
+          <Contactpage></Contactpage>
          </div>
          
         </div>

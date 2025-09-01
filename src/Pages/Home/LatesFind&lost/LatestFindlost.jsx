@@ -9,19 +9,19 @@ const LatestFindlost = ({pet}) => {
    const {_id,TaskTitle,Date,Location,photo,Description}=pet
     return (
      <>
-     <div className=" card bg-base-100  shadow-lg  ">
+     <div className=" bg-base-100  rounded-xl shadow-lg ">
   {/* <!-- Image --> */}
-  <img class="object-cover  rounded-t-xl" src={photo} />
+  <img class="object-cover  rounded-t-xl h-48 w-full" src={photo} />
 
   {/* <!-- Content --> */}
-  <div className=" card-body ">
-  <div className='flex items-center gap-2'>
-    <MdSubtitles className='text-blue-500' size={18}/>
+  <div className=" px-4 ">
+  <div className='flex items-center '>
+    <MdSubtitles className='text-blue-500' size={18}/> 
     <h3 className="text-lg font-semibold text-gray-600">{TaskTitle}</h3>
   </div>
    
-   <div className='flex items-center gap-6 mb-10'>
-    <p >{Description}</p>
+   <div className='flex  items-center gap-6 '>
+    <p >{Description.slice(0,100)}</p>
    </div>
    <div className='flex  justify-between'>
      <p>{Date}</p>
@@ -29,7 +29,7 @@ const LatestFindlost = ({pet}) => {
    </div>
  <div>
    <Link to={`/Ditelspages/${_id}`}>
-     <button className=" btn  text-orange-500 hover:bg-cyan-300 font-bold w-full">See more</button>
+     <button className=" btn my-4 text-orange-500 hover:bg-cyan-300 font-bold w-full">See more</button>
     </Link>
  </div>
    

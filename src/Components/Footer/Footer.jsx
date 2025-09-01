@@ -33,8 +33,8 @@ const Footer = () => {
     {/* <!-- Contact --> */}
     <div className=''>
       <h3 className="text-lg font-semibold mb-4 ">Contact</h3>
-      <p className="text-sm ">Email: Amanmunshi3236@gmail.com</p>
-      <p className="text-sm ">Phone: 01928779670</p>
+      <p className="text-sm ">Email: Amanmunshi032@gmail.com</p>
+      <p className="text-sm ">Phone: 01949457409</p>
      <p className="text-sm ">Address: 123  Dhaka, City, Bangladesh</p>
     </div>
   </div>

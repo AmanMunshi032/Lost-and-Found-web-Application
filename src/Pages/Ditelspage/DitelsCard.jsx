@@ -7,9 +7,9 @@ const DitelsCard = ({ ditels }) => {
     ditels || {};
   // console.log(ditels)
   return (
-    <div className="md:w-2xl mx-auto  my-6 p-8 bg-gray-100 shadow-sm rounded-2xl">
+    <div className="md:w-5xl mt-20 mx-auto  my-6 p-8 bg-gray-100 shadow-sm rounded-2xl">
       <div className="flex justify-center items-center">
-        <img className=" w-xl rounded-2xl" src={photo} alt="" />
+        <img className=" w-full h-72 object-cover rounded-2xl" src={photo} alt="" />
       </div>
       <div className="flex justify-center items-center mt-4">
         <div>
@@ -43,7 +43,7 @@ const DitelsCard = ({ ditels }) => {
         {postType == "Found" ? (
           <>
             <button
-              className="btn hover:bg-cyan-300 text-orange-500 font-bold w-full"
+              className="btn mt-6 hover:bg-cyan-300 text-orange-500 font-bold "
               onClick={() => document.getElementById("my_modal_3").showModal()}
             >
               {" "}

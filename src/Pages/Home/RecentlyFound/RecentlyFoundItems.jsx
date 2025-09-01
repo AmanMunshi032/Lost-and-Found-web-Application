@@ -38,14 +38,14 @@ const RecentlyFoundItems = () => {
   ];
 
   return (
-      <section className=" py-12 px-4 md:px-12">
-      <div className="max-w-6xl mx-auto text-center">
+      <section className="p-6">
+      <div className=" text-center">
         <motion.h2
        
-          className="text-4xl  text-orange-500 md:text-4xl font-bold  mb-6"
+          className="text-3xl  text-orange-500 md:text-5xl font-bold  mb-6"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           What People Say
         </motion.h2>
@@ -59,7 +59,7 @@ const RecentlyFoundItems = () => {
               key={review.id}
               className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
                whileHover={{
-                scale: [null, 1.1, 1.6],
+                scale: [null, 1.1, 1.2],
                 transition: {
                     duration: 0.3,
                     times: [0, 0.6, 1],
